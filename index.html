@@ -175,9 +175,11 @@
         }
 
         .welcome-photo-placeholder {
-            width: 350px;
-            height: 350px;
-            flex-shrink: 0;
+            width: 100%;
+            max-width: 350px;
+            height: 350px; /* Forces the height */
+            object-fit: cover; /* Ensures the real photo doesn't stretch or squish */
+            margin: 0 auto; /* Centers it on mobile when the grid stacks */
         }
 
         .bio-image-placeholder {
@@ -228,9 +230,6 @@
             }
             .welcome-content {
                 padding-right: 0;
-            }
-            .welcome-photo-placeholder {
-                height: 250px;
             }
             .bio-content {
                 flex-direction: column;

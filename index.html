@@ -140,6 +140,8 @@
         .full-width-banner {
             margin-top: var(--nav-height); 
             width: 100%;
+            max-width: none; /* Breaks it out of the 1000px container */
+            padding: 0; /* Removes the default side padding */
             height: 60vh; 
             background-color: var(--banner-bg-color); 
             background-size: cover;

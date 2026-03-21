@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Gift of Music | Piano Lessons in Duluth, MN</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Styles & Typography */
+        :root {
+            /* Sampler Palette */
+            --color-dusty-periwinkle: #9CB9E0; 
+            --color-light-cool-blue: #A4B6DA; 
+            --color-deep-purple: #8B6AA8;     
+            --color-accent-gold: #D8D88E;     
+            
+            /* Mapping to function */
+            --primary-color: var(--color-deep-purple); 
+            --accent-color: var(--color-accent-gold); 
+            --header-bg-color: var(--color-dusty-periwinkle);
+            --banner-bg-color: var(--color-dusty-periwinkle);
+            
+            --text-color: #333; 
+            --bg-color: #f2f4f8; 
+            --white: #ffffff;
+            --nav-height: 70px; 
+        }
+        
+        * {
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif; /* Has the traditional 'u' stem */
+            font-size: 1.1rem; 
+            line-height: 1.7;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif; /* Elegant, readable serif with clear feet */
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            margin-top: 0;
+            font-weight: 700; 
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.5rem; }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #6a4c85; 
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--header-bg-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            height: var(--nav-height);
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white); 
+        }
+
+        .header-logo-placeholder {
+            width: 40px; 
+            height: 40px;
+            background-color: rgba(255,255,255,0.3); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.7rem;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--white); 
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1); 
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary-color); 
+        }
+
+        /* Layout & Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .full-width-banner {
+            margin-top: var(--nav-height); 
+            width: 100%;
+            height: 60vh; 
+            background-color: var(--banner-bg-color); 
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center; 
+        }
+
+        .welcome-content {
+            padding-right: 1rem;
+        }
+
+        .photo-placeholder {
+            background-color: #ddd;
+            border-radius: 8px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        .welcome-photo-placeholder {
+            width: 100%;
+            height: 350px;
+        }
+
+        .bio-image-placeholder {
+            width: 300px;
+            height: 300px;
+            flex-shrink: 0;
+        }
+
+        .bio-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color); 
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 5%;
+            margin-top: 2rem;
+        }
+
+        footer h2 { color: var(--color-accent-gold); }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: var(--white); 
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            color: var(--color-accent-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; 
+            }
+            .grid-2 {
+                grid-template-columns: 1fr; 
+                gap: 2rem;
+            }
+            .welcome-content {
+                padding-right: 0;
+            }
+            .welcome-photo-placeholder {
+                height: 250px;
+            }
+            .bio-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .bio-image-placeholder {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-group">
+                <div class="header-logo-placeholder">LOGO</div>
+                <span>A Gift of Music</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#biography">Biography</a></li>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner" class="full-width-banner">
+        [Image Placeholder: Large Full-Width 'A Gift of Music' Graphic]
+    </section>
+
+    <section id="home">
+        <div class="grid-2">
+            <div class="welcome-content">
+                <h1>Welcome to A Gift of Music!</h1>
+                <p>Life at home can be hectic at times! Receiving music lessons in a private studio allows you to focus in a quiet and distraction-free environment. Students of any age and skill level may receive piano lessons in the privacy of my home, which is conveniently located in the Lakeside/Lester Park neighborhood of Duluth. Come discover the gift of music in you!</p>
+            </div>
+            <div class="photo-placeholder welcome-photo-placeholder">
+                [Image Placeholder: Large Studio/Piano Photo]
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="grid-2" style="align-items: start;">
+            <div>
+                <h3>What can music lessons do for my child?</h3>
+                <p>Children absorb music in the same way they absorb their native language and culture: it simply becomes a part of them. In more ways that one, music is a language in itself. Children who are exposed to music at a very young age quickly internalize the concepts of sound, pitch, rhythm and tone without even realizing it. Many children display some form of musical expression long before uttering their first words. Music lessons, and especially piano lessons, can take the music that already exists inside children and develop an outlet for their musical expression and creativity.</p>
+            </div>
+            <div>
+                <h3>What can music lessons do for me?</h3>
+                <p>It is never too late to learn how to play an instrument! As an adult, you may not have as much ability to "absorb" music as a language, but you do have the supreme advantage of applying to music what you already know about form, structure, rhythm, styles and the role that human emotion plays in musical expression. Sometimes it takes years for children to fully appreciate and utilize their music education; as an adult, you possess a passion and drive to play the music you already know and love!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="biography" style="background-color: var(--white); border-radius: 12px; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+        <h2>Biography</h2>
+        <div class="bio-content">
+            <div class="photo-placeholder bio-image-placeholder">
+                [Image Placeholder: Amy's Headshot]
+            </div>
+            <div>
+                <p>Amy Hanauer grew up in Mora, Minnesota. She started piano at age five, and later learned how to play the flute and guitar. In high school Amy began her musical journey with her very first job at Immanuel Lutheran Church in Mora, MN. For three years, she accompanied the congregation and choirs on organ and piano.</p>
+                <p>After high school, Amy studied piano under Dr. Justin Rubin at the University of Minnesota, Duluth. She also enjoyed singing and performing with UMD's University Singers and Chamber Singers under the direction of Dr. Stanely Wold. After graduating in 2002 with a B.A. in Music, Amy began working with children in a variety of settings. She moved to Atlanta, GA in 2006, and continued her work with children until she finally found the perfect opportunity to combine her two passions.</p>
+                <p>"A Gift of Music" was founded in 2010 and provided private piano and guitar lessons to students throughout the metro Atlanta area. Amy moved back to the Northland in 2016 and has now reopened "A Gift of Music" in Duluth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lessons">
+        <h2>Lessons</h2>
+        <p>Anyone can learn how to play an instrument... it's never too late! I offer piano lessons at any skill level. Because everyone learns their own way and at their own pace, each individual curriculum and lesson plan will be custom designed for each student. The lessons will focus on all aspects of music: styles, concepts, rhythm, theory, performance and even composition!</p>
+        <p><strong>You could begin immediately!</strong> Please call or email me for current rates and a list of available lesson times.</p>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p><strong>Amy Hanauer</strong></p>
+        <p>Duluth, MN 55804</p>
+        <p>Email: <a href="mailto:amy@agiftofmusic.net">amy@agiftofmusic.net</a></p>
+        <p>Phone: <a href="tel:+12188314628">(218) 831-4628</a></p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8; font-weight: 500;">&copy; 2026 A Gift of Music, LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
